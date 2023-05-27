@@ -1,25 +1,18 @@
+const form =  document.querySelector("form")
+const ul = document.querySelector("ul")
 
 
+form.onsubmit = function (event) {
+  event.preventDefault()
 
-let primeiroBimestre = [8, 5, 7];
-let SegundoBimestre = [10, 7, 7.5];
 
+const input = document.querySelector("input");
+const value = input.value;
+const li = document.createElement("li");
+const button = document.createElement("button")
+button.textContent = "Limpar"
 
-console.log()
-
-var a = 10;
-var b = 15;
-var c = a * b
-
-console.log(c)
-
-var nota1 = 8.5;
-var nota2 = 8.0;
-var nota3 = 7.5;
-
-function media (){
-
-let media = (nota1 + nota2 + nota3) / 3;
-
-console.log(media())
-
+li.textContent = value;
+li.appendChild(button)
+ul.appendChild(li)
+}
